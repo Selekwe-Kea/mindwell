@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MindWell — find support, find wellness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--brand:#6C63FF;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;line-height:1.5;color:#0f172a}
+    .navbar-brand{font-family:Poppins, Inter; font-weight:700; color:var(--brand)!important}
+    .hero{background:linear-gradient(180deg, rgba(108,99,255,0.12), rgba(108,99,255,0.04));padding:4.5rem 0}
+    .hero h1{font-family:Poppins; font-weight:700; color:#0b1220}
+    .tagline{color:var(--muted)}
+    .feature-card{border-radius:14px;padding:1.25rem;background:white;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .mood-btn{font-size:1.35rem;border-radius:10px;padding:.6rem .9rem}
+    .mood-history{max-height:210px;overflow:auto}
+    .resource-card img{height:120px;object-fit:cover;border-radius:8px}
+    footer{background:#0f172a;color:#eef2ff;padding:2rem 0}
+    @media (max-width:767px){.hero{padding:3rem 0}}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-brain me-2"></i>MindWell</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mood">Mood Tracker</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#groups">Support Groups</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pro">Professional Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1>MindWell</h1>
+          <p class="lead tagline">find support, find wellness — simple tools and trusted connections for better mental health.</p>
+          <p class="mb-4">Track moods, explore curated resources, join peer support groups, and connect with professionals — all in one safe place.</p>
+          <a href="#mood" class="btn btn-primary me-2">Track Mood</a>
+          <a href="#resources" class="btn btn-outline-primary">Explore Resources</a>
+        </div>
+        <div class="col-lg-6 text-center mt-4 mt-lg-0">
+          <img src="images/logo.jpg" alt="wellness" style="max-width:360px;opacity:.95">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <section id="features" class="container mb-5">
+      <div class="text-center mb-4">
+        <h2>Key Features</h2>
+        <p class="text-muted">Designed to be approachable, private and helpful.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center p-3">
+            <div class="mb-3"><i class="fas fa-smile-beam fa-2x text-primary"></i></div>
+            <h5>Mood Tracking</h5>
+            <p class="small text-muted">A simple, intuitive interface to record how you feel over time.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center p-3">
+            <div class="mb-3"><i class="fas fa-book-open fa-2x text-primary"></i></div>
+            <h5>Resource Library</h5>
+            <p class="small text-muted">Curated articles, videos and podcasts to learn practical skills.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center p-3">
+            <div class="mb-3"><i class="fas fa-users fa-2x text-primary"></i></div>
+            <h5>Support Groups</h5>
+            <p class="small text-muted">Join moderated groups to share experiences and find peer support.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card h-100 text-center p-3">
+            <div class="mb-3"><i class="fas fa-user-md fa-2x text-primary"></i></div>
+            <h5>Professional Support</h5>
+            <p class="small text-muted">Book online sessions with mental health professionals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mood" class="container mb-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h3>Quick Mood Tracker</h3>
+          <p class="text-muted">Tap an emoji, set intensity, add a note — your data stays private in your browser.</p>
+
+          <div class="mb-3 d-flex gap-2 flex-wrap">
+            <button class="btn btn-outline-secondary mood-btn" data-emoji="😄">😄 Happy</button>
+            <button class="btn btn-outline-secondary mood-btn" data-emoji="🙂">🙂 Okay</button>
+            <button class="btn btn-outline-secondary mood-btn" data-emoji="😕">😕 Upset</button>
+            <button class="btn btn-outline-secondary mood-btn" data-emoji="😢">😢 Sad</button>
+            <button class="btn btn-outline-secondary mood-btn" data-emoji="😡">😡 Angry</button>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Intensity: <span id="intensityVal">5</span>/10</label>
+            <input type="range" id="intensity" min="1" max="10" value="5" class="form-range">
+          </div>
+
+          <div class="mb-3">
+            <textarea id="moodNote" class="form-control" rows="2" placeholder="Add a short note (optional)"></textarea>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button id="saveMood" class="btn btn-primary">Save Mood</button>
+            <button id="clearMood" class="btn btn-outline-danger">Clear History</button>
+          </div>
+
+          <div class="mt-4">
+            <h6>Recent entries</h6>
+            <ul id="moodHistory" class="list-group mood-history mt-2"></ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="p-4 feature-card">
+            <h5>Why track moods?</h5>
+            <p class="text-muted">Recording moods helps you notice patterns, triggers and progress. Sharing this information with a therapist can make sessions more productive.</p>
+            <ul class="small text-muted">
+              <li>Visualize changes over weeks</li>
+              <li>Learn triggers and coping strategies</li>
+              <li>Celebrate small improvements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="container mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Resource Library</h3>
+        <small class="text-muted">curated articles, videos & podcasts</small>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="resource-card p-3 feature-card h-100">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" class="w-100 mb-3" alt="article">
+            <h6 class="mb-1">How to practice grounding</h6>
+            <p class="small text-muted">A short guide with exercises you can do anywhere.</p>
+            <a href="#" class="small">Read article <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="resource-card p-3 feature-card h-100">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=def" class="w-100 mb-3" alt="video">
+            <h6 class="mb-1">5-minute breathing exercise</h6>
+            <p class="small text-muted">Guided video to help reduce immediate stress.</p>
+            <a href="#" class="small">Watch video <i class="fas fa-play ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="resource-card p-3 feature-card h-100">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ghi" class="w-100 mb-3" alt="podcast">
+            <h6 class="mb-1">Mental Health Matters — Ep. 12</h6>
+            <p class="small text-muted">A podcast episode about building healthy routines.</p>
+            <a href="#" class="small">Listen <i class="fas fa-headphones ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="groups" class="container mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>Support Groups</h3>
+        <small class="text-muted">peer-led and moderated</small>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-3 h-100">
+            <h6 class="mb-1">Anxiety Support</h6>
+            <p class="small text-muted">Weekly group for sharing coping strategies.</p>
+            <button class="btn btn-outline-primary btn-sm join-group" data-group="Anxiety Support">Join</button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-3 h-100">
+            <h6 class="mb-1">Mood & Motivation</h6>
+            <p class="small text-muted">A friendly space to celebrate small wins.</p>
+            <button class="btn btn-outline-primary btn-sm join-group" data-group="Mood & Motivation">Join</button>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card p-3 h-100">
+            <h6 class="mb-1">Grief & Loss</h6>
+            <p class="small text-muted">Compassionate peer conversations.</p>
+            <button class="btn btn-outline-primary btn-sm join-group" data-group="Grief & Loss">Join</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pro" class="container mb-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h3>Professional Support</h3>
+          <p class="text-muted">Find a licensed professional and book an online session.</p>
+          <div class="feature-card p-3">
+            <div class="d-flex align-items-center mb-2">
+              <img src="https://www.codewithfaraz.com/tools/placeholder?size=64x64&bgColor=E1BEE7&textColor=6A1B9A&text=DR" class="me-3 rounded-circle" alt="therapist">
+              <div>
+                <strong>Dr. A. Nkosi</strong>
+                <div class="small text-muted">Clinical Psychologist • Cognitive Behavioural Therapy</div>
+              </div>
+            </div>
+            <p class="small text-muted mb-2">Available for 45-minute online sessions. Fees and insurance options shown during booking.</p>
+            <a href="#" class="btn btn-primary btn-sm">Book session</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5>Contact a professional</h5>
+          <form id="proForm" class="p-3 feature-card">
+            <div class="mb-2">
+              <label class="form-label">Your name</label>
+              <input class="form-control" id="proName" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="proEmail" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Preferred date</label>
+              <input type="date" class="form-control" id="proDate">
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary">Request contact</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
+            </div>
+            <div id="proFormFeedback" class="mt-2 small text-success"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-1">MindWell</h5>
+          <p class="small mb-0">find support, find wellness — created with care.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <small class="text-muted">© <span id="year"></span> MindWell</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // small client-side app: mood tracker + simple interactions
+    const intensity = document.getElementById('intensity');
+    const intensityVal = document.getElementById('intensityVal');
+    const moodBtns = document.querySelectorAll('.mood-btn');
+    const saveMood = document.getElementById('saveMood');
+    const clearMood = document.getElementById('clearMood');
+    const moodNote = document.getElementById('moodNote');
+    const moodHistory = document.getElementById('moodHistory');
+    let selectedEmoji = null;
+
+    intensity.addEventListener('input', ()=> intensityVal.textContent = intensity.value);
+
+    moodBtns.forEach(b=> b.addEventListener('click', (e)=>{
+      moodBtns.forEach(x=> x.classList.remove('btn-primary'));
+      e.currentTarget.classList.add('btn-primary');
+      selectedEmoji = e.currentTarget.dataset.emoji;
+    }));
+
+    function loadHistory(){
+      const data = JSON.parse(localStorage.getItem('mindwell_moods')||'[]');
+      moodHistory.innerHTML = '';
+      if(!data.length){
+        moodHistory.innerHTML = '<li class="list-group-item small text-muted">No entries yet — start by saving your mood.</li>';
+        return;
+      }
+      data.slice().reverse().forEach(entry=>{
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-start';
+        li.innerHTML = `<div><strong>${entry.emoji}</strong> <span class="small text-muted">(${entry.intensity}/10)</span><div class="small text-muted">${entry.note||''}</div></div><div class="small text-muted">${new Date(entry.ts).toLocaleString()}</div>`;
+        moodHistory.appendChild(li);
+      });
+    }
+
+    saveMood.addEventListener('click', ()=>{
+      if(!selectedEmoji){
+        alert('Please pick an emoji that best matches how you feel.');
+        return;
+      }
+      const entry = {emoji:selectedEmoji,intensity:intensity.value,note:moodNote.value,ts:Date.now()};
+      const arr = JSON.parse(localStorage.getItem('mindwell_moods')||'[]');
+      arr.push(entry);
+      localStorage.setItem('mindwell_moods',JSON.stringify(arr));
+      moodNote.value='';
+      selectedEmoji=null;
+      moodBtns.forEach(x=> x.classList.remove('btn-primary'));
+      loadHistory();
+    });
+
+    clearMood.addEventListener('click', ()=>{
+      if(confirm('Clear all saved mood entries?')){
+        localStorage.removeItem('mindwell_moods');
+        loadHistory();
+      }
+    });
+
+    // join group buttons - demo behaviour
+    document.querySelectorAll('.join-group').forEach(btn=>btn.addEventListener('click', (e)=>{
+      const g = e.currentTarget.dataset.group;
+      alert(`You've joined the "${g}" group. Check the Groups area to see meeting times.`);
+    }));
+
+    // professional contact demo
+    document.getElementById('proForm').addEventListener('submit', (ev)=>{
+      ev.preventDefault();
+      document.getElementById('proFormFeedback').textContent = 'Thanks — a professional will contact you soon (demo).';
+      ev.target.reset();
+    });
+
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // initial render
+    loadHistory();
+  </script>
+</body>
+</html>
